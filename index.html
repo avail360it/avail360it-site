@@ -338,37 +338,73 @@
     <div id="assessment" class="rounded-3xl border bg-white p-6 shadow-xl">
       <h3 class="text-base font-semibold">Request an IT &amp; Security Assessment</h3>
       <!-- NOTE: this form is static for now; you'll wire it to a backend later -->
-      <form class="mt-4 grid gap-3 text-sm">
+      
+      <form
+        class="mt-4 grid gap-3 text-sm"
+        action="https://formspree.io/f/xvgdeegr"
+        method="POST"
+      >
         <div class="grid gap-3 sm:grid-cols-2">
           <input
             class="rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
+            type="text"
+            name="name"
             placeholder="Full name"
+            required
           />
           <input
             class="rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
+            type="email"
+            name="email"
             placeholder="Work email"
+            required
           />
         </div>
+
         <input
           class="rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
+          type="text"
+          name="company"
           placeholder="Company"
         />
+
         <input
           class="rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
+          type="tel"
+          name="phone"
           placeholder="Phone number"
         />
+
         <textarea
           class="h-28 rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
+          name="message"
           placeholder="What do you need help with?"
+          required
         ></textarea>
 
+        <!-- Optional: subject line in the email -->
+        <input
+          type="hidden"
+          name="_subject"
+          value="New IT & Security Assessment Request from AVAIL360IT.com"
+        />
+
+        <!-- Optional: redirect to a thank-you page after submit
+        <input
+          type="hidden"
+          name="_redirect"
+          value="https://avail360it.com/thank-you.html"
+        />
+        -->
+
         <button
-          type="button"
+          type="submit"
           class="mt-1 w-full rounded-2xl bg-blue-600 px-5 py-2 text-sm font-medium text-white hover:bg-blue-700"
         >
           Submit Request
         </button>
       </form>
+
     </div>
 
   </div>
@@ -431,3 +467,4 @@
 
 </body>
 </html>
+
