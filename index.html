@@ -21,12 +21,16 @@
 <header class="sticky top-0 z-40 w-full border-b bg-white/80 backdrop-blur">
   <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6">
     <div class="flex items-center gap-3">
-      <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 text-white shadow-sm">
-        <span class="font-bold text-lg">A</span>
-      </div>
-      <div class="leading-tight">
-        <div class="text-lg font-semibold tracking-tight">AVAIL 360 IT</div>
-        <div class="text-xs text-gray-500">Managed IT • Cybersecurity • Cloud</div>
+      <!-- COMPANY LOGO IN HEADER -->
+      <img
+        src="logo-avail360.png"
+        alt="AVAIL 360 IT by Entrust"
+        class="h-10 w-auto"
+      />
+      <div class="hidden flex-col leading-tight sm:flex">
+        <div class="text-xs font-semibold tracking-tight text-gray-700">
+          Managed IT • Cybersecurity • Cloud
+        </div>
       </div>
     </div>
     <nav class="hidden items-center gap-6 text-sm md:flex">
@@ -339,79 +343,78 @@
       <h3 class="text-base font-semibold">Request an IT &amp; Security Assessment</h3>
 
       <form
-  id="assessmentForm"
-  class="mt-4 grid gap-3 text-sm"
-  action="https://formspree.io/f/xvgdeegr"
-  method="POST"
->
-  <div class="grid gap-3 sm:grid-cols-2">
-    <input
-      class="rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
-      type="text"
-      name="name"
-      placeholder="Full name"
-      required
-    />
-    <input
-      class="rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
-      type="email"
-      name="email"
-      placeholder="Work email"
-      required
-    />
-  </div>
+        id="assessmentForm"
+        class="mt-4 grid gap-3 text-sm"
+        action="https://formspree.io/f/xvgdeegr"
+        method="POST"
+      >
+        <div class="grid gap-3 sm:grid-cols-2">
+          <input
+            class="rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
+            type="text"
+            name="name"
+            placeholder="Full name"
+            required
+          />
+          <input
+            class="rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
+            type="email"
+            name="email"
+            placeholder="Work email"
+            required
+          />
+        </div>
 
-  <input
-    class="rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
-    type="text"
-    name="company"
-    placeholder="Company"
-  />
+        <input
+          class="rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
+          type="text"
+          name="company"
+          placeholder="Company"
+        />
 
-  <input
-    class="rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
-    type="tel"
-    name="phone"
-    placeholder="Phone number"
-  />
+        <input
+          class="rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
+          type="tel"
+          name="phone"
+          placeholder="Phone number"
+        />
 
-  <textarea
-    class="h-28 rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
-    name="message"
-    placeholder="What do you need help with?"
-    required
-  ></textarea>
+        <textarea
+          class="h-28 rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
+          name="message"
+          placeholder="What do you need help with?"
+          required
+        ></textarea>
 
-  <input
-    type="hidden"
-    name="_subject"
-    value="New IT & Security Assessment Request from AVAIL360IT.com"
-  />
+        <input
+          type="hidden"
+          name="_subject"
+          value="New IT & Security Assessment Request from AVAIL360IT.com"
+        />
 
-  <!-- Success message -->
-  <div
-    id="successMessage"
-    class="hidden rounded-xl border border-green-500 bg-green-50 p-3 text-sm text-green-700"
-  >
-    ✔️ Thank you — your request has been received. Our team will reach out shortly.
-  </div>
+        <!-- Success message -->
+        <div
+          id="successMessage"
+          class="hidden rounded-xl border border-green-500 bg-green-50 p-3 text-sm text-green-700"
+        >
+          ✔️ Thank you — your request has been received. Our team will reach out shortly.
+        </div>
 
-  <!-- Error message -->
-  <div
-    id="errorMessage"
-    class="hidden rounded-xl border border-red-500 bg-red-50 p-3 text-sm text-red-700"
-  >
-    ❌ Something went wrong. Please try again.
-  </div>
+        <!-- Error message -->
+        <div
+          id="errorMessage"
+          class="hidden rounded-xl border border-red-500 bg-red-50 p-3 text-sm text-red-700"
+        >
+          ❌ Something went wrong. Please try again.
+        </div>
 
-  <button
-    type="submit"
-    class="mt-1 w-full rounded-2xl bg-blue-600 px-5 py-2 text-sm font-medium text-white hover:bg-blue-700"
-  >
-    Submit Request
-  </button>
-</form>
-
+        <button
+          type="submit"
+          class="mt-1 w-full rounded-2xl bg-blue-600 px-5 py-2 text-sm font-medium text-white hover:bg-blue-700"
+        >
+          Submit Request
+        </button>
+      </form>
     </div>
 
   </div>
@@ -422,16 +425,20 @@
 <!-- FOOTER -->
 <footer class="border-t bg-white">
   <div class="mx-auto max-w-7xl px-4 py-8 text-sm text-gray-600 sm:px-6">
+
+    <!-- LOGO IN FOOTER -->
+    <div class="flex justify-center">
+      <img
+        src="logo-avail360.png"
+        alt="AVAIL 360 IT by Entrust"
+        class="h-10 w-auto mb-4"
+      />
+    </div>
+
     <div class="grid gap-8 md:grid-cols-4">
 
       <div>
-        <div class="flex items-center gap-3">
-          <div class="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-600 text-white">
-            <span class="font-bold text-sm">A</span>
-          </div>
-          <div class="text-sm font-semibold tracking-tight">AVAIL 360 IT</div>
-        </div>
-        <p class="mt-3 text-xs text-gray-600">
+        <p class="text-xs text-gray-600">
           Managed IT, cybersecurity, and cloud solutions for Pennsylvania businesses.
         </p>
       </div>
@@ -472,17 +479,20 @@
   </div>
 </footer>
 
+<!-- INLINE FORM HANDLER -->
 <script>
 document.getElementById("assessmentForm").addEventListener("submit", async function(e) {
-  e.preventDefault(); // Stop page reload
+  e.preventDefault();
 
   const form = e.target;
   const data = new FormData(form);
   const action = form.getAttribute("action");
 
-  // Hide previous messages
-  document.getElementById("successMessage").classList.add("hidden");
-  document.getElementById("errorMessage").classList.add("hidden");
+  const successEl = document.getElementById("successMessage");
+  const errorEl = document.getElementById("errorMessage");
+
+  successEl.classList.add("hidden");
+  errorEl.classList.add("hidden");
 
   try {
     const response = await fetch(action, {
@@ -494,22 +504,16 @@ document.getElementById("assessmentForm").addEventListener("submit", async funct
     });
 
     if (response.ok) {
-      // Show success message
-      document.getElementById("successMessage").classList.remove("hidden");
+      successEl.classList.remove("hidden");
       form.reset();
     } else {
-      // Show error message
-      document.getElementById("errorMessage").classList.remove("hidden");
+      errorEl.classList.remove("hidden");
     }
   } catch (err) {
-    document.getElementById("errorMessage").classList.remove("hidden");
+    errorEl.classList.remove("hidden");
   }
 });
 </script>
 
-
-  
 </body>
 </html>
-
-
