@@ -11,7 +11,7 @@
     html { scroll-behavior: smooth; }
   </style>
 
-  <!-- Basic SEO meta (can be expanded later) -->
+  <!-- Basic SEO meta -->
   <meta name="description" content="AVAIL 360 IT provides managed IT, cybersecurity, Microsoft 365, cloud services, and IT support for small and midsized organizations across Pennsylvania. Led by former FBI professionals, we bring federal-level security mindset to everyday IT operations.">
   <meta name="robots" content="index, follow">
 </head>
@@ -31,14 +31,13 @@
         <div class="text-sm font-semibold tracking-tight text-gray-900">
           AVAIL 360 IT
         </div>
-        <!-- Tagline only from sm and up so it doesn't crush space on very small widths -->
         <div class="hidden text-[11px] text-gray-500 sm:block">
           Managed IT • Cybersecurity • Cloud
         </div>
       </div>
     </div>
 
-    <!-- Nav -->
+    <!-- Desktop nav -->
     <nav class="hidden items-center gap-6 text-sm md:flex">
       <a href="#services" class="text-gray-700 hover:text-gray-900">Services</a>
       <a href="#security" class="text-gray-700 hover:text-gray-900">Security</a>
@@ -52,6 +51,35 @@
         Request IT Assessment
       </a>
     </nav>
+
+    <!-- Mobile menu button -->
+    <button
+      id="mobileMenuButton"
+      class="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 md:hidden"
+      aria-label="Open main menu"
+      aria-expanded="false"
+    >
+      <span class="block h-0.5 w-5 bg-gray-800"></span>
+      <span class="mt-1 block h-0.5 w-5 bg-gray-800"></span>
+      <span class="mt-1 block h-0.5 w-5 bg-gray-800"></span>
+    </button>
+  </div>
+
+  <!-- Mobile nav -->
+  <div id="mobileMenu" class="hidden border-t bg-white md:hidden">
+    <nav class="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-3 text-sm sm:px-6">
+      <a href="#services" class="py-1 text-gray-700 hover:text-gray-900">Services</a>
+      <a href="#security" class="py-1 text-gray-700 hover:text-gray-900">Security</a>
+      <a href="#about" class="py-1 text-gray-700 hover:text-gray-900">About</a>
+      <a href="#team" class="py-1 text-gray-700 hover:text-gray-900">Our Team</a>
+      <a href="#contact" class="py-1 text-gray-700 hover:text-gray-900">Contact</a>
+      <a
+        href="#assessment"
+        class="mt-2 rounded-2xl bg-blue-600 px-4 py-2 text-xs font-medium text-white hover:bg-blue-700"
+      >
+        Request IT Assessment
+      </a>
+    </nav>
   </div>
 </header>
 
@@ -59,81 +87,118 @@
 
 <!-- HERO -->
 <section class="relative overflow-hidden">
-  <div class="absolute inset-0 -z-10 bg-gradient-to-b from-gray-50 to-white"></div>
-  <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 md:py-24">
+  <div class="absolute inset-0 -z-10 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-800"></div>
+
+  <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 text-white sm:px-6 md:grid-cols-2 md:py-20">
     <div>
-      <h1 class="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
-        Security-first Managed IT,
-        <span class="text-blue-700">built on federal-level expertise.</span>
-      </h1>
-      <p class="mt-5 max-w-xl text-sm leading-relaxed text-gray-600 sm:text-base">
-        AVAIL 360 IT delivers managed IT, cybersecurity, and cloud services for small and midsized
-        organizations across Pennsylvania. Our leadership is built on decades of real-world experience
-        in security, digital forensics, and operational reliability, ensuring your environment is
-        protected and scalable.
-      </p>
-      <div class="mt-6 flex flex-wrap items-center gap-3">
-        <a href="#assessment"
-           class="flex items-center gap-2 rounded-2xl bg-blue-600 px-5 py-2 text-sm font-medium text-white hover:bg-blue-700">
-          Request a Free IT Assessment →
-        </a>
-        <a href="#services" class="text-sm font-medium text-gray-700 hover:text-gray-900">View Services</a>
+      <!-- FBI badge -->
+      <div class="inline-flex items-center rounded-full bg-orange-500/20 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-orange-300">
+        Former FBI–led IT &amp; Security
       </div>
 
-      <div class="mt-6 grid max-w-xl grid-cols-1 gap-4 text-xs text-gray-600 sm:grid-cols-3">
-        <div class="rounded-2xl border bg-white p-4 shadow-sm">
-          <div class="text-sm font-semibold text-gray-900">Managed IT</div>
-          <div class="mt-1">Support, devices, patches.</div>
+      <h1 class="mt-4 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+        IT &amp; Cybersecurity.
+        <span class="block text-orange-300">FBI-grade thinking.</span>
+      </h1>
+
+      <p class="mt-4 max-w-xl text-sm leading-relaxed text-slate-100/90 sm:text-base">
+        We keep your systems online, your data protected, and your team supported —
+        with leadership that’s managed real-world incidents, not just tools and tickets.
+      </p>
+
+      <div class="mt-6 flex flex-wrap items-center gap-3">
+        <a
+          href="#assessment"
+          class="flex items-center gap-2 rounded-2xl bg-orange-400 px-5 py-2 text-sm font-semibold text-slate-900 shadow hover:bg-orange-300"
+        >
+          Request an IT Assessment →
+        </a>
+        <a href="#services" class="text-sm font-medium text-slate-100 hover:text-white">
+          View Services
+        </a>
+      </div>
+
+      <!-- quick value tiles -->
+      <div class="mt-6 grid max-w-xl grid-cols-1 gap-3 text-xs text-slate-100 sm:grid-cols-3">
+        <div class="rounded-2xl border border-slate-700 bg-slate-900/60 p-4">
+          <div class="text-[11px] font-semibold uppercase text-orange-300">Managed IT</div>
+          <div class="mt-1 text-slate-200">Help desk, devices, patching.</div>
         </div>
-        <div class="rounded-2xl border bg-white p-4 shadow-sm">
-          <div class="text-sm font-semibold text-gray-900">Security Program</div>
-          <div class="mt-1">Controls, policy, and oversight.</div>
+        <div class="rounded-2xl border border-slate-700 bg-slate-900/60 p-4">
+          <div class="text-[11px] font-semibold uppercase text-orange-300">Security</div>
+          <div class="mt-1 text-slate-200">Controls, monitoring, training.</div>
         </div>
-        <div class="rounded-2xl border bg-white p-4 shadow-sm">
-          <div class="text-sm font-semibold text-gray-900">Cloud &amp; M365</div>
-          <div class="mt-1">Secure collaboration tools.</div>
+        <div class="rounded-2xl border border-slate-700 bg-slate-900/60 p-4">
+          <div class="text-[11px] font-semibold uppercase text-orange-300">Cloud</div>
+          <div class="mt-1 text-slate-200">Microsoft 365 &amp; identity.</div>
         </div>
       </div>
     </div>
 
     <div>
-      <div class="relative mx-auto max-w-md rounded-3xl border bg-gradient-to-br from-blue-50 to-white p-5 shadow-xl">
-        <div class="mb-3 text-xs font-semibold uppercase tracking-wide text-blue-700">
+      <div class="relative mx-auto max-w-md rounded-3xl border border-slate-700 bg-slate-900/70 p-6 shadow-2xl">
+        <div class="mb-3 text-[11px] font-semibold uppercase tracking-wide text-orange-200">
           At-a-glance coverage
         </div>
-        <div class="grid grid-cols-2 gap-4 text-xs sm:text-sm">
-          <div class="flex flex-col rounded-2xl border bg-white p-4 shadow-sm">
-            <div class="font-semibold text-gray-900">Help Desk</div>
-            <div class="mt-2 text-gray-500">User support &amp; patching.</div>
+        <div class="grid grid-cols-2 gap-3 text-xs sm:text-sm">
+          <div class="flex flex-col rounded-2xl border border-slate-700 bg-slate-800/80 p-4">
+            <div class="font-semibold text-white">Help Desk</div>
+            <div class="mt-1 text-slate-200">User support &amp; patching.</div>
           </div>
-          <div class="flex flex-col rounded-2xl border bg-white p-4 shadow-sm">
-            <div class="font-semibold text-gray-900">Identity &amp; Access</div>
-            <div class="mt-2 text-gray-500">MFA, conditional access.</div>
+          <div class="flex flex-col rounded-2xl border border-slate-700 bg-slate-800/80 p-4">
+            <div class="font-semibold text-white">Identity &amp; Access</div>
+            <div class="mt-1 text-slate-200">MFA, conditional access.</div>
           </div>
-          <div class="flex flex-col rounded-2xl border bg-white p-4 shadow-sm">
-            <div class="font-semibold text-gray-900">Data Protection</div>
-            <div class="mt-2 text-gray-500">Backups &amp; recovery.</div>
+          <div class="flex flex-col rounded-2xl border border-slate-700 bg-slate-800/80 p-4">
+            <div class="font-semibold text-white">Data Protection</div>
+            <div class="mt-1 text-slate-200">Backups &amp; recovery.</div>
           </div>
-          <div class="flex flex-col rounded-2xl border bg-white p-4 shadow-sm">
-            <div class="font-semibold text-gray-900">Advisory</div>
-            <div class="mt-2 text-gray-500">Roadmaps &amp; strategy.</div>
+          <div class="flex flex-col rounded-2xl border border-slate-700 bg-slate-800/80 p-4">
+            <div class="font-semibold text-white">Advisory</div>
+            <div class="mt-1 text-slate-200">Roadmaps &amp; strategy.</div>
+          </div>
+        </div>
+
+        <div class="mt-4 grid grid-cols-3 gap-3 text-center text-[11px] text-slate-200">
+          <div class="rounded-2xl border border-slate-700 bg-slate-800/80 p-3">
+            <div class="text-lg font-bold text-orange-300">&lt; 60s</div>
+            <div class="mt-1">Avg. response</div>
+          </div>
+          <div class="rounded-2xl border border-slate-700 bg-slate-800/80 p-3">
+            <div class="text-lg font-bold text-orange-300">98%</div>
+            <div class="mt-1">User satisfaction</div>
+          </div>
+          <div class="rounded-2xl border border-slate-700 bg-slate-800/80 p-3">
+            <div class="text-lg font-bold text-orange-300">&gt; 99%</div>
+            <div class="mt-1">Backup success</div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
 <!-- TRUST BAR -->
-<section class="border-y bg-gray-50 py-5">
-  <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-3 px-4 text-[11px] text-gray-600 sm:px-6">
-    <span class="rounded-full border bg-white px-4 py-1.5 shadow-sm">Microsoft 365</span>
-    <span class="rounded-full border bg-white px-4 py-1.5 shadow-sm">Azure</span>
-    <span class="rounded-full border bg-white px-4 py-1.5 shadow-sm">Endpoint Protection</span>
-    <span class="rounded-full border bg-white px-4 py-1.5 shadow-sm">Backup &amp; BCDR</span>
-    <span class="rounded-full border bg-white px-4 py-1.5 shadow-sm">Zero Trust</span>
-    <span class="rounded-full border bg-white px-4 py-1.5 shadow-sm">Compliance</span>
+<section class="border-y bg-white py-5">
+  <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-3 px-4 text-[11px] sm:px-6">
+    <span class="rounded-full border border-blue-100 bg-blue-50 px-4 py-1.5 font-medium text-blue-700">
+      Microsoft 365
+    </span>
+    <span class="rounded-full border border-slate-200 bg-slate-50 px-4 py-1.5 text-slate-700">
+      Azure &amp; Cloud
+    </span>
+    <span class="rounded-full border border-orange-100 bg-orange-50 px-4 py-1.5 text-orange-700">
+      Endpoint Protection
+    </span>
+    <span class="rounded-full border border-slate-200 bg-slate-50 px-4 py-1.5 text-slate-700">
+      Backup &amp; BCDR
+    </span>
+    <span class="rounded-full border border-slate-200 bg-slate-50 px-4 py-1.5 text-slate-700">
+      Zero Trust
+    </span>
+    <span class="rounded-full border border-slate-200 bg-slate-50 px-4 py-1.5 text-slate-700">
+      Compliance
+    </span>
   </div>
 </section>
 
@@ -142,16 +207,19 @@
   <div class="mx-auto max-w-2xl text-center">
     <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Services</h2>
     <p class="mt-4 text-sm text-gray-600 sm:text-base">
-      A single partner for IT operations, cybersecurity, cloud services, and end-user support.
+      Everything you’d expect from a modern MSP — run with a security-first mindset.
     </p>
   </div>
 
   <div class="mt-10 grid gap-6 text-sm md:grid-cols-2 lg:grid-cols-3">
 
     <!-- Managed IT -->
-    <div class="rounded-2xl border bg-white p-6 shadow-sm">
-      <div class="text-base font-semibold">Managed IT Services</div>
-      <ul class="mt-4 space-y-1.5 text-gray-600">
+    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <div class="inline-flex rounded-full bg-blue-50 px-3 py-1 text-[11px] font-semibold uppercase text-blue-700">
+        Managed IT
+      </div>
+      <div class="mt-3 text-base font-semibold">Managed IT Services</div>
+      <ul class="mt-3 space-y-1.5 text-gray-600">
         <li>• 24/7 help desk &amp; remote support</li>
         <li>• Endpoint patching &amp; monitoring</li>
         <li>• Network &amp; Wi-Fi management</li>
@@ -160,9 +228,12 @@
     </div>
 
     <!-- Cybersecurity -->
-    <div class="rounded-2xl border bg-white p-6 shadow-sm">
-      <div class="text-base font-semibold">Cybersecurity &amp; Compliance</div>
-      <ul class="mt-4 space-y-1.5 text-gray-600">
+    <div class="rounded-2xl border border-orange-200 bg-white p-6 shadow-sm">
+      <div class="inline-flex rounded-full bg-orange-50 px-3 py-1 text-[11px] font-semibold uppercase text-orange-700">
+        Security
+      </div>
+      <div class="mt-3 text-base font-semibold">Cybersecurity &amp; Compliance</div>
+      <ul class="mt-3 space-y-1.5 text-gray-600">
         <li>• Endpoint protection &amp; threat detection</li>
         <li>• MFA &amp; conditional access</li>
         <li>• Policy &amp; control alignment</li>
@@ -172,9 +243,12 @@
     </div>
 
     <!-- M365 & Cloud -->
-    <div class="rounded-2xl border bg-white p-6 shadow-sm">
-      <div class="text-base font-semibold">Microsoft 365 &amp; Cloud</div>
-      <ul class="mt-4 space-y-1.5 text-gray-600">
+    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <div class="inline-flex rounded-full bg-blue-50 px-3 py-1 text-[11px] font-semibold uppercase text-blue-700">
+        Cloud
+      </div>
+      <div class="mt-3 text-base font-semibold">Microsoft 365 &amp; Cloud</div>
+      <ul class="mt-3 space-y-1.5 text-gray-600">
         <li>• Tenant design &amp; migrations</li>
         <li>• Teams &amp; SharePoint configuration</li>
         <li>• Identity &amp; access management</li>
@@ -183,9 +257,12 @@
     </div>
 
     <!-- Backup & DR -->
-    <div class="rounded-2xl border bg-white p-6 shadow-sm">
-      <div class="text-base font-semibold">Backup &amp; Disaster Recovery</div>
-      <ul class="mt-4 space-y-1.5 text-gray-600">
+    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <div class="inline-flex rounded-full bg-slate-50 px-3 py-1 text-[11px] font-semibold uppercase text-slate-700">
+        Resilience
+      </div>
+      <div class="mt-3 text-base font-semibold">Backup &amp; Disaster Recovery</div>
+      <ul class="mt-3 space-y-1.5 text-gray-600">
         <li>• Cloud &amp; on-prem backups</li>
         <li>• RTO/RPO planning</li>
         <li>• Recovery documentation</li>
@@ -194,9 +271,12 @@
     </div>
 
     <!-- vCIO -->
-    <div class="rounded-2xl border bg-white p-6 shadow-sm">
-      <div class="text-base font-semibold">vCIO &amp; Strategy</div>
-      <ul class="mt-4 space-y-1.5 text-gray-600">
+    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <div class="inline-flex rounded-full bg-slate-50 px-3 py-1 text-[11px] font-semibold uppercase text-slate-700">
+        Strategy
+      </div>
+      <div class="mt-3 text-base font-semibold">vCIO &amp; IT Roadmapping</div>
+      <ul class="mt-3 space-y-1.5 text-gray-600">
         <li>• IT &amp; security roadmaps</li>
         <li>• Risk assessments</li>
         <li>• Budgeting &amp; planning</li>
@@ -205,9 +285,12 @@
     </div>
 
     <!-- Projects & On-site -->
-    <div class="rounded-2xl border bg-white p-6 shadow-sm">
-      <div class="text-base font-semibold">Projects &amp; On-Site Work</div>
-      <ul class="mt-4 space-y-1.5 text-gray-600">
+    <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <div class="inline-flex rounded-full bg-slate-50 px-3 py-1 text-[11px] font-semibold uppercase text-slate-700">
+        Projects
+      </div>
+      <div class="mt-3 text-base font-semibold">Projects &amp; On-Site Work</div>
+      <ul class="mt-3 space-y-1.5 text-gray-600">
         <li>• Office moves &amp; build-outs</li>
         <li>• Network deployments</li>
         <li>• Server installations</li>
@@ -215,58 +298,33 @@
       </ul>
     </div>
 
-    <!-- Penetration Testing -->
-    <div class="rounded-2xl border bg-white p-6 shadow-sm">
-      <div class="text-base font-semibold">Internal &amp; External Penetration Testing</div>
-      <ul class="mt-4 space-y-1.5 text-gray-600">
-        <li>• Controlled simulation of real-world attacks</li>
-        <li>• Internal and external network testing</li>
-        <li>• Prioritized findings &amp; remediation guidance</li>
-        <li>• Executive summary &amp; detailed technical reporting</li>
-      </ul>
-    </div>
-
   </div>
 </section>
 
 <!-- SECURITY -->
-<section id="security" class="bg-gray-50 py-16 md:py-20">
+<section id="security" class="bg-slate-900 py-16 text-slate-100 md:py-20">
   <div class="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 md:grid-cols-2">
     <div>
-      <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Security built on real-world experience.</h2>
-      <p class="mt-4 text-sm text-gray-600 sm:text-base">
-        Our security approach comes from decades of hands-on investigative, cybersecurity,
-        and digital forensics experience. This allows us to implement controls, policies,
-        and systems that stand up to real incidents—not just checklists.
+      <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Security that’s been tested in the real world.</h2>
+      <p class="mt-4 text-sm sm:text-base text-slate-200">
+        Our leadership has overseen crisis response, investigations, and security programs at the federal level.
+        We bring that mindset into how we design and run your environment.
       </p>
-      <ul class="mt-6 space-y-2 text-sm text-gray-700">
-        <li>• Identity, access, and endpoint controls</li>
-        <li>• Written policies aligned to real operations</li>
-        <li>• Logging and alerting without the noise</li>
-        <li>• Training that improves user behavior</li>
+      <ul class="mt-6 space-y-2 text-sm">
+        <li>• Practical controls, not just paperwork</li>
+        <li>• Clear priorities when something looks wrong</li>
+        <li>• Security that fits how your people actually work</li>
       </ul>
     </div>
 
-    <div class="rounded-3xl border bg-white p-6 shadow-xl">
-      <h3 class="text-base font-semibold">Client-facing metrics</h3>
-      <div class="mt-4 grid grid-cols-2 gap-4 text-center text-xs sm:text-sm">
-        <div class="rounded-2xl border p-4">
-          <div class="text-2xl font-bold text-gray-900">&lt; 60s</div>
-          <div class="mt-1 text-gray-600">Avg. response time</div>
-        </div>
-        <div class="rounded-2xl border p-4">
-          <div class="text-2xl font-bold text-gray-900">98%</div>
-          <div class="mt-1 text-gray-600">User satisfaction</div>
-        </div>
-        <div class="rounded-2xl border p-4">
-          <div class="text-2xl font-bold text-gray-900">&gt; 95%</div>
-          <div class="mt-1 text-gray-600">Patch compliance</div>
-        </div>
-        <div class="rounded-2xl border p-4">
-          <div class="text-2xl font-bold text-gray-900">&gt; 99%</div>
-          <div class="mt-1 text-gray-600">Backup success</div>
-        </div>
-      </div>
+    <div class="rounded-3xl border border-slate-700 bg-slate-800/70 p-6 shadow-xl">
+      <h3 class="text-base font-semibold text-white">What you get</h3>
+      <ul class="mt-4 space-y-2 text-sm text-slate-200">
+        <li>• Hardened identities, endpoints, and networks</li>
+        <li>• Monitoring that cuts noise and highlights real issues</li>
+        <li>• Backup and recovery that’s tested, not assumed</li>
+        <li>• User training that improves behavior over time</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -276,29 +334,28 @@
   <div class="max-w-3xl">
     <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">About AVAIL 360 IT</h2>
     <p class="mt-4 text-sm text-gray-600 sm:text-base">
-      AVAIL 360 IT was created for organizations that need strong IT operations and credible,
-      practical security. We combine modern managed IT services with the type of oversight and
-      governance typically found in enterprise or federal environments.
+      AVAIL 360 IT exists for organizations that can’t afford to guess on IT and security.
+      We combine the structure of an enterprise program with the responsiveness of a local team.
     </p>
   </div>
 
   <div class="mt-10 grid gap-8 text-sm md:grid-cols-2">
     <div class="rounded-3xl border bg-white p-6 shadow-sm">
-      <h3 class="text-base font-semibold">How we work</h3>
+      <h3 class="text-base font-semibold">How we operate</h3>
       <ul class="mt-4 space-y-2 text-gray-600">
         <li>• Documented standards and runbooks</li>
-        <li>• Regular check-ins and roadmap reviews</li>
-        <li>• Measurable metrics and reporting</li>
-        <li>• Long-term partnership approach</li>
+        <li>• Regular reviews and clear roadmaps</li>
+        <li>• Metrics you can see and understand</li>
+        <li>• Long-term partnership mindset</li>
       </ul>
     </div>
 
     <div class="rounded-3xl border bg-white p-6 shadow-sm">
-      <h3 class="text-base font-semibold">Where we operate</h3>
+      <h3 class="text-base font-semibold">Where we work</h3>
       <ul class="mt-4 space-y-2 text-gray-600">
         <li>• Remote and on-site support across Pennsylvania</li>
         <li>• Familiar technicians, no revolving-door service</li>
-        <li>• Local knowledge of industries and vendors</li>
+        <li>• Local understanding of industries and vendors</li>
       </ul>
     </div>
   </div>
@@ -309,22 +366,12 @@
   <div class="mx-auto max-w-5xl px-4 text-center sm:px-6">
     <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Our Team</h2>
     <p class="mt-4 text-sm text-gray-600 sm:text-base leading-relaxed">
-      AVAIL 360 IT is led by a team of three former FBI professionals who spent their careers
-      responsible for crisis management, security oversight, and complex investigations at the
-      federal level. That experience now shapes how we design, secure, and operate technology
-      for our clients.
+      AVAIL 360 IT is led by three former FBI professionals with backgrounds in crisis
+      management, security oversight, and complex investigations. That experience shapes how
+      we think about risk, response, and day-to-day operations for our clients.
       <br><br>
-      Our leadership includes a retired Assistant Special Agent in Charge who oversaw crisis
-      response and major criminal and national security investigations, a former Chief Security
-      Officer for an FBI division with responsibility for information, personnel, and physical
-      security, and an information systems security and digital forensics specialist with
-      hands-on experience supporting federal security programs.
-      <br><br>
-      Around that core, we’ve built a team of systems engineers, administrators, and help desk
-      technicians who focus on reliability, documentation, and clear communication. Together,
-      we bring enterprise-grade process and a federal-level security mindset to small and midsized
-      organizations across Pennsylvania. Our shared principle is simple:
-      <span class="font-semibold text-gray-900">make technology secure, predictable, and easy for our clients.</span>
+      Around that leadership, we’ve built a team of systems engineers, administrators, and
+      help desk technicians focused on reliability, documentation, and clear communication.
     </p>
   </div>
 </section>
@@ -337,8 +384,7 @@
     <div>
       <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Ready to talk?</h2>
       <p class="mt-4 text-sm text-gray-700 sm:text-base">
-        Whether you're evaluating new IT providers, planning a project, or reviewing your
-        security posture — we're ready to help.
+        Whether you're evaluating providers, planning a project, or reviewing your security posture — we’re ready to help.
       </p>
 
       <div class="mt-5 space-y-2 text-sm text-gray-800">
@@ -439,8 +485,8 @@
     <div class="flex justify-center">
       <img
         src="A360IT-TP.png"
-        alt="AVAIL 360 IT by Entrust"
-        class="h-20 w-auto mb-4"
+        alt="AVAIL 360 IT"
+        class="mb-4 h-20 w-auto"
       />
     </div>
 
@@ -475,7 +521,7 @@
         <div class="text-xs font-semibold text-gray-900 uppercase tracking-wide">Contact</div>
         <ul class="mt-3 space-y-1 text-xs text-gray-600">
           <li>📞 888-342-8245</li>
-          <li>✉️ info@avail360it.com</li>
+          <li>✉️ helpdesk@avail360it.com</li>
           <li>📍 Pennsylvania, USA</li>
         </ul>
       </div>
@@ -488,49 +534,54 @@
   </div>
 </footer>
 
-<!-- INLINE FORM HANDLER -->
+<!-- SCRIPTS -->
 <script>
-document.getElementById("assessmentForm").addEventListener("submit", async function(e) {
-  e.preventDefault();
+  // Mobile menu toggle
+  const mobileBtn = document.getElementById("mobileMenuButton");
+  const mobileMenu = document.getElementById("mobileMenu");
 
-  const form = e.target;
-  const data = new FormData(form);
-  const action = form.getAttribute("action");
+  if (mobileBtn && mobileMenu) {
+    mobileBtn.addEventListener("click", () => {
+      const isHidden = mobileMenu.classList.contains("hidden");
+      mobileMenu.classList.toggle("hidden", !isHidden);
+      mobileBtn.setAttribute("aria-expanded", isHidden ? "true" : "false");
+    });
+  }
 
-  const successEl = document.getElementById("successMessage");
-  const errorEl = document.getElementById("errorMessage");
+  // Inline Formspree handler
+  const form = document.getElementById("assessmentForm");
+  if (form) {
+    form.addEventListener("submit", async function(e) {
+      e.preventDefault();
 
-  successEl.classList.add("hidden");
-  errorEl.classList.add("hidden");
+      const data = new FormData(form);
+      const action = form.getAttribute("action");
 
-  try {
-    const response = await fetch(action, {
-      method: "POST",
-      body: data,
-      headers: {
-        "Accept": "application/json"
+      const successEl = document.getElementById("successMessage");
+      const errorEl = document.getElementById("errorMessage");
+
+      successEl.classList.add("hidden");
+      errorEl.classList.add("hidden");
+
+      try {
+        const response = await fetch(action, {
+          method: "POST",
+          body: data,
+          headers: { "Accept": "application/json" }
+        });
+
+        if (response.ok) {
+          successEl.classList.remove("hidden");
+          form.reset();
+        } else {
+          errorEl.classList.remove("hidden");
+        }
+      } catch (err) {
+        errorEl.classList.remove("hidden");
       }
     });
-
-    if (response.ok) {
-      successEl.classList.remove("hidden");
-      form.reset();
-    } else {
-      errorEl.classList.remove("hidden");
-    }
-  } catch (err) {
-    errorEl.classList.remove("hidden");
   }
-});
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
