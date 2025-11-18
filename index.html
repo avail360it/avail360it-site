@@ -339,61 +339,79 @@
       <h3 class="text-base font-semibold">Request an IT &amp; Security Assessment</h3>
 
       <form
-        class="mt-4 grid gap-3 text-sm"
-        action="https://formspree.io/f/xvgdeegr"
-        method="POST"
-      >
-        <div class="grid gap-3 sm:grid-cols-2">
-          <input
-            class="rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
-            type="text"
-            name="name"
-            placeholder="Full name"
-            required
-          />
-          <input
-            class="rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
-            type="email"
-            name="email"
-            placeholder="Work email"
-            required
-          />
-        </div>
+  id="assessmentForm"
+  class="mt-4 grid gap-3 text-sm"
+  action="https://formspree.io/f/xvgdeegr"
+  method="POST"
+>
+  <div class="grid gap-3 sm:grid-cols-2">
+    <input
+      class="rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
+      type="text"
+      name="name"
+      placeholder="Full name"
+      required
+    />
+    <input
+      class="rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
+      type="email"
+      name="email"
+      placeholder="Work email"
+      required
+    />
+  </div>
 
-        <input
-          class="rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
-          type="text"
-          name="company"
-          placeholder="Company"
-        />
+  <input
+    class="rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
+    type="text"
+    name="company"
+    placeholder="Company"
+  />
 
-        <input
-          class="rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
-          type="tel"
-          name="phone"
-          placeholder="Phone number"
-        />
+  <input
+    class="rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
+    type="tel"
+    name="phone"
+    placeholder="Phone number"
+  />
 
-        <textarea
-          class="h-28 rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
-          name="message"
-          placeholder="What do you need help with?"
-          required
-        ></textarea>
+  <textarea
+    class="h-28 rounded-xl border px-3 py-2 outline-none focus:ring focus:ring-blue-600"
+    name="message"
+    placeholder="What do you need help with?"
+    required
+  ></textarea>
 
-        <input
-          type="hidden"
-          name="_subject"
-          value="New IT & Security Assessment Request from AVAIL360IT.com"
-        />
+  <input
+    type="hidden"
+    name="_subject"
+    value="New IT & Security Assessment Request from AVAIL360IT.com"
+  />
 
-        <button
-          type="submit"
-          class="mt-1 w-full rounded-2xl bg-blue-600 px-5 py-2 text-sm font-medium text-white hover:bg-blue-700"
-        >
-          Submit Request
-        </button>
-      </form>
+  <!-- Success message -->
+  <div
+    id="successMessage"
+    class="hidden rounded-xl border border-green-500 bg-green-50 p-3 text-sm text-green-700"
+  >
+    ✔️ Thank you — your request has been received. Our team will reach out shortly.
+  </div>
+
+  <!-- Error message -->
+  <div
+    id="errorMessage"
+    class="hidden rounded-xl border border-red-500 bg-red-50 p-3 text-sm text-red-700"
+  >
+    ❌ Something went wrong. Please try again.
+  </div>
+
+  <button
+    type="submit"
+    class="mt-1 w-full rounded-2xl bg-blue-600 px-5 py-2 text-sm font-medium text-white hover:bg-blue-700"
+  >
+    Submit Request
+  </button>
+</form>
+
     </div>
 
   </div>
@@ -454,6 +472,44 @@
   </div>
 </footer>
 
+<script>
+document.getElementById("assessmentForm").addEventListener("submit", async function(e) {
+  e.preventDefault(); // Stop page reload
+
+  const form = e.target;
+  const data = new FormData(form);
+  const action = form.getAttribute("action");
+
+  // Hide previous messages
+  document.getElementById("successMessage").classList.add("hidden");
+  document.getElementById("errorMessage").classList.add("hidden");
+
+  try {
+    const response = await fetch(action, {
+      method: "POST",
+      body: data,
+      headers: {
+        "Accept": "application/json"
+      }
+    });
+
+    if (response.ok) {
+      // Show success message
+      document.getElementById("successMessage").classList.remove("hidden");
+      form.reset();
+    } else {
+      // Show error message
+      document.getElementById("errorMessage").classList.remove("hidden");
+    }
+  } catch (err) {
+    document.getElementById("errorMessage").classList.remove("hidden");
+  }
+});
+</script>
+
+
+  
 </body>
 </html>
+
 
